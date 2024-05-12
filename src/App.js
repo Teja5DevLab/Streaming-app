@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+// App.jsx
+import React from "react";
+import Navbar from "./Components/Navbar/Navbar";
+import { Route, Routes, useNavigate } from "react-router-dom";
+import Home from "./Pages/Home/Home";
+import Video from "./Pages/Video/Video";
+import SearchResults from "./Pages/SearchResults/SearchResults";
 
-function App() {
+const App = () => {
+  const [sidebar, setSidebar] = React.useState(true);
+  const navigate = useNavigate();
+
+  const handleSearch = (query) => {
+    navigate(`/search/${query}`);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar setSidebar={setSidebar} handleSearch={handleSearch} />
+      <Routes>
+        <Route path="/" element={<Home sidebar={sidebar} />} />
+        <Route path="/video/:categoryId/:videoId" element={<Video />} />
+        <Route path="/search/:query" element={<SearchResults />} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;
