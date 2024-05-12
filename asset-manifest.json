@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/streaming-app/static/css/main.82f14cf6.css",
-    "main.js": "/streaming-app/static/js/main.2f4925c7.js",
-    "static/js/453.7cf78889.chunk.js": "/streaming-app/static/js/453.7cf78889.chunk.js",
-    "static/media/cameron.png": "/streaming-app/static/media/cameron.cedb1ba5832f609542da.png",
-    "static/media/tom.png": "/streaming-app/static/media/tom.df63bfcb6f1c8f5d7137.png",
-    "static/media/logo.png": "/streaming-app/static/media/logo.0ba28f7552cd9071deff.png",
-    "static/media/jack.png": "/streaming-app/static/media/jack.3a2249a07dd80a9c36a4.png",
-    "static/media/megan.png": "/streaming-app/static/media/megan.d9c678d896bed0b8c031.png",
-    "static/media/simon.png": "/streaming-app/static/media/simon.a92c2df263101574e364.png",
-    "index.html": "/streaming-app/index.html",
-    "main.82f14cf6.css.map": "/streaming-app/static/css/main.82f14cf6.css.map",
-    "main.2f4925c7.js.map": "/streaming-app/static/js/main.2f4925c7.js.map",
-    "453.7cf78889.chunk.js.map": "/streaming-app/static/js/453.7cf78889.chunk.js.map"
+    "main.css": "/Streaming-app/static/css/main.82f14cf6.css",
+    "main.js": "/Streaming-app/static/js/main.e8400b9d.js",
+    "static/js/453.7cf78889.chunk.js": "/Streaming-app/static/js/453.7cf78889.chunk.js",
+    "static/media/cameron.png": "/Streaming-app/static/media/cameron.cedb1ba5832f609542da.png",
+    "static/media/tom.png": "/Streaming-app/static/media/tom.df63bfcb6f1c8f5d7137.png",
+    "static/media/logo.png": "/Streaming-app/static/media/logo.0ba28f7552cd9071deff.png",
+    "static/media/jack.png": "/Streaming-app/static/media/jack.3a2249a07dd80a9c36a4.png",
+    "static/media/megan.png": "/Streaming-app/static/media/megan.d9c678d896bed0b8c031.png",
+    "static/media/simon.png": "/Streaming-app/static/media/simon.a92c2df263101574e364.png",
+    "index.html": "/Streaming-app/index.html",
+    "main.82f14cf6.css.map": "/Streaming-app/static/css/main.82f14cf6.css.map",
+    "main.e8400b9d.js.map": "/Streaming-app/static/js/main.e8400b9d.js.map",
+    "453.7cf78889.chunk.js.map": "/Streaming-app/static/js/453.7cf78889.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.82f14cf6.css",
-    "static/js/main.2f4925c7.js"
+    "static/js/main.e8400b9d.js"
   ]
 }
