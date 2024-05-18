@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Streaming-app/static/css/main.a1b9d105.css",
-    "main.js": "/Streaming-app/static/js/main.55874d62.js",
+    "main.css": "/Streaming-app/static/css/main.fbecf74c.css",
+    "main.js": "/Streaming-app/static/js/main.fa1ac8f0.js",
     "static/js/453.7cf78889.chunk.js": "/Streaming-app/static/js/453.7cf78889.chunk.js",
     "static/media/loading.gif": "/Streaming-app/static/media/loading.1952935ed80fba5926fe.gif",
     "static/media/jack.png": "/Streaming-app/static/media/jack.9212ddd135d41870c6b7.png",
@@ -10,13 +10,14 @@
     "static/media/megan.png": "/Streaming-app/static/media/megan.d9c678d896bed0b8c031.png",
     "static/media/simon.png": "/Streaming-app/static/media/simon.a92c2df263101574e364.png",
     "static/media/exit.png": "/Streaming-app/static/media/exit.d852239552897f44fb16.png",
+    "static/media/loginBg.avif": "/Streaming-app/static/media/loginBg.55809a49cd9e37890cf9.avif",
     "index.html": "/Streaming-app/index.html",
-    "main.a1b9d105.css.map": "/Streaming-app/static/css/main.a1b9d105.css.map",
-    "main.55874d62.js.map": "/Streaming-app/static/js/main.55874d62.js.map",
+    "main.fbecf74c.css.map": "/Streaming-app/static/css/main.fbecf74c.css.map",
+    "main.fa1ac8f0.js.map": "/Streaming-app/static/js/main.fa1ac8f0.js.map",
     "453.7cf78889.chunk.js.map": "/Streaming-app/static/js/453.7cf78889.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a1b9d105.css",
-    "static/js/main.55874d62.js"
+    "static/css/main.fbecf74c.css",
+    "static/js/main.fa1ac8f0.js"
   ]
 }
