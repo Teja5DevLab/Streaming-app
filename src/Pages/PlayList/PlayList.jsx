@@ -6,11 +6,13 @@ import { value_converter } from "../../data";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import cross from "../../assets/cross.png";
 import { db, auth } from "../../firebase";
+import loader from "../../assets/loading.gif";
 import { collection, getDocs, doc, deleteDoc } from "firebase/firestore";
 
 const Playlist = ({ sidebar }) => {
   const [playlist, setPlaylist] = useState([]);
   const [category, setCategory] = useState(0);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchPlaylist = async () => {
@@ -21,6 +23,7 @@ const Playlist = ({ sidebar }) => {
         const querySnapshot = await getDocs(playlistCollectionRef);
         const playlistData = querySnapshot.docs.map((doc) => doc.data());
         setPlaylist(playlistData);
+        setLoading(false);
       }
     };
 
@@ -51,38 +54,44 @@ const Playlist = ({ sidebar }) => {
       />
       <div className={`container ${sidebar ? "" : "large-container"}`}>
         <h1 id="large-playlist">Playlist</h1>
-        <div
-          className={playlist.length <= 3 ? "playlist-flex" : "playlist-grid"}
-        >
-          {playlist.length > 0 ? (
-            playlist.map((video, index) => (
-              <div key={index} className="card-container">
-                <Link
-                  to={`/video/${video.categoryId}/${video.videoId}`}
-                  className="playlist-card"
-                >
-                  <img src={video.thumbnail} alt={video.title} />
-                  <div className="video-details">
-                    <h2>{video.title}</h2>
-                    <h3>{video.channelTitle}</h3>
-                    <p>
-                      {value_converter(video.viewCount)} views &bull;{" "}
-                      {moment(video.publishedAt).fromNow()}
-                    </p>
-                  </div>
-                </Link>
-                <button
-                  className="remove-button"
-                  onClick={() => removeFromPlaylist(video.videoId)}
-                >
-                  <img src={cross} alt="" />
-                </button>
-              </div>
-            ))
-          ) : (
-            <p id="empty-playlist">Add videos</p>
-          )}
-        </div>
+        {loading ? (
+          <div>
+            <img className="loader" src={loader} alt="" />
+          </div>
+        ) : (
+          <div
+            className={playlist.length <= 3 ? "playlist-flex" : "playlist-grid"}
+          >
+            {playlist.length > 0 ? (
+              playlist.map((video, index) => (
+                <div key={index} className="card-container">
+                  <Link
+                    to={`/video/${video.categoryId}/${video.videoId}`}
+                    className="playlist-card"
+                  >
+                    <img src={video.thumbnail} alt={video.title} />
+                    <div className="video-details">
+                      <h2>{video.title}</h2>
+                      <h3>{video.channelTitle}</h3>
+                      <p>
+                        {value_converter(video.viewCount)} views &bull;{" "}
+                        {moment(video.publishedAt).fromNow()}
+                      </p>
+                    </div>
+                  </Link>
+                  <button
+                    className="remove-button"
+                    onClick={() => removeFromPlaylist(video.videoId)}
+                  >
+                    <img src={cross} alt="" />
+                  </button>
+                </div>
+              ))
+            ) : (
+              <p id="empty-playlist">Add videos</p>
+            )}
+          </div>
+        )}
       </div>
     </>
   );
