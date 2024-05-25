@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Streaming-app/static/css/main.c24ca077.css",
-    "main.js": "/Streaming-app/static/js/main.7cca8b36.js",
+    "main.js": "/Streaming-app/static/js/main.c388932e.js",
     "static/js/453.7cf78889.chunk.js": "/Streaming-app/static/js/453.7cf78889.chunk.js",
     "static/media/loading.gif": "/Streaming-app/static/media/loading.1952935ed80fba5926fe.gif",
     "static/media/logo.png": "/Streaming-app/static/media/logo.0ba28f7552cd9071deff.png",
@@ -10,11 +10,11 @@
     "static/media/loginBg.avif": "/Streaming-app/static/media/loginBg.55809a49cd9e37890cf9.avif",
     "index.html": "/Streaming-app/index.html",
     "main.c24ca077.css.map": "/Streaming-app/static/css/main.c24ca077.css.map",
-    "main.7cca8b36.js.map": "/Streaming-app/static/js/main.7cca8b36.js.map",
+    "main.c388932e.js.map": "/Streaming-app/static/js/main.c388932e.js.map",
     "453.7cf78889.chunk.js.map": "/Streaming-app/static/js/453.7cf78889.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c24ca077.css",
-    "static/js/main.7cca8b36.js"
+    "static/js/main.c388932e.js"
   ]
 }
