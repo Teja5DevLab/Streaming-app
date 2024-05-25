@@ -1,21 +1,34 @@
 import React from "react";
 import "./Sidebar.css";
 import home from "../../assets/home.png";
-import tom from "../../assets/tom.png";
 import megan from "../../assets/megan.png";
 import entertainment from "../../assets/entertainment.png";
 import game_icon from "../../assets/game_icon.png";
 import music from "../../assets/music.png";
 import blogs from "../../assets/blogs.png";
-import cameron from "../../assets/cameron.png";
-import simon from "../../assets/simon.png";
-import jack from "../../assets/jack.png";
 import news from "../../assets/news.png";
+import save from "../../assets/save.png";
 import tech from "../../assets/tech.png";
 import sports from "../../assets/sports.png";
 import automobile_icon from "../../assets/automobiles.png";
+import { logOut } from "../../firebase";
+import logout from "../../assets/exit.png";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = ({ sidebar, category, setCategory }) => {
+  const navigate = useNavigate();
+  const handleLogout = async () => {
+    try {
+      await logOut();
+    } catch (error) {
+      console.error("Error logging out", error);
+    }
+  };
+
+  const goToPlaylist = () => {
+    navigate("/playlist");
+  };
+
   return (
     <div className={`sidebar ${sidebar ? "" : "small-sidebar"}`}>
       <div className="shortcut-links">
@@ -84,27 +97,44 @@ const Sidebar = ({ sidebar, category, setCategory }) => {
         </div>
         <hr />
       </div>
+      <div className="logoutWrap">
+        {sidebar ? (
+          <button id="logout" onClick={handleLogout}>
+            <img src={logout} alt="Logout" />
+            Logout
+          </button>
+        ) : (
+          <img
+            id="logout-image"
+            onClick={handleLogout}
+            src={logout}
+            alt="Logout"
+          />
+        )}
+        {sidebar ? (
+          <button id="logout" onClick={goToPlaylist}>
+            <img src={save} alt="Playlist" />
+            Playlist
+          </button>
+        ) : (
+          <img
+            id="logout-image"
+            onClick={goToPlaylist}
+            src={save}
+            alt="Playlist"
+          />
+        )}
+      </div>
+      <hr id="line1" />
       <div className="subscribed">
         <h3>Subscriptions</h3>
         <div className="side_links">
-          <img src={jack} alt="" />
-          <p>PewDiePie</p>
-        </div>
-        <div className="side_links">
-          <img src={tom} alt="" />
-          <p>Justine Bieber</p>
+          <img src={megan} alt="" />
+          <p>Ben Shapiro</p>
         </div>
         <div className="side_links">
           <img src={megan} alt="" />
-          <p>5-Minute Crafts</p>
-        </div>
-        <div className="side_links">
-          <img src={cameron} alt="" />
-          <p>Nas Daily</p>
-        </div>
-        <div className="side_links">
-          <img src={simon} alt="" />
-          <p>Mr Beast</p>
+          <p>UFC</p>
         </div>
       </div>
     </div>

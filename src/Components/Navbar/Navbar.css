@@ -15,13 +15,14 @@ nav {
 .logo {
   width: 130px;
   margin-right: 15px;
+  margin-left: 5px;
 }
 
 .search-box {
   display: flex;
   align-items: center;
   margin-right: 15px;
-  border: 1px solid #5a5a5ad6;
+  border: 2px solid #5a5a5ad6;
   padding: 11px 15px;
   border-radius: 25px;
 }
@@ -70,6 +71,9 @@ nav {
   .navright .user-icon {
     display: block;
   }
+  .navright .save-btn{
+    display: block;
+  }
   .search-box input {
     width: 20rem;
   }
@@ -78,24 +82,33 @@ nav {
   .search-box input::placeholder {
     color: #5a5a5a00;
   }
+  .logo{
+    filter: invert(.5);
+  }
   .search-box input {
-    width: 10rem;
+    width: 8rem;
   }
 }
 @media (max-width: 450px) {
   .search-box input {
-    width: 9.5rem;
+    width: 7rem;
   }
   .logo {
     width: 90px;
   }
   .navright .user-icon {
-    display: none;
+    margin-right: 5px;
   }
 }
-@media (max-width: 330px) {
+@media (max-width: 380px) {
+  .navright .user-icon {
+    display: none;
+  }
+  .navright .save-btn {
+    margin-right: 5px
+  }
   .search-box input {
-    width: 7rem;
+    width: 5.5rem;
   }
   .logo {
     width: 75px;

@@ -1,0 +1,85 @@
+.full-body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background: url("../../assets/loginBg.avif") no-repeat center center fixed;
+  background-size: cover;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+  margin: 20px;
+}
+
+.login-container .login-box {
+  background: rgba(40, 40, 40, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(40, 40, 40, 0.33);
+  padding: 40px;
+  text-align: center;
+  max-width: 550px;
+  height: 300px;
+  width: 100%;
+}
+
+.login-container .logo {
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.login-container h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.login-container p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.login-container .google-button {
+  background-color: #db4437;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-container .google-button:hover {
+  background-color: #c33d2c;
+}
+
+@media (max-width: 370px) {
+  .login-container .logo {
+    width: 180px;
+  }
+  .login-container h2 {
+    font-size: 20px;
+  }
+  .login-container p {
+    font-size: 16px;
+  }
+  .login-container .google-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 340px) {
+  .login-container .login-box {
+    padding: 40px 20px;
+  }
+}

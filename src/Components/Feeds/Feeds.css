@@ -28,3 +28,8 @@
 .card p {
   font-size: 14px;
 }
+
+.loader {
+  margin: 20% 30%;
+  width: 50px;
+}

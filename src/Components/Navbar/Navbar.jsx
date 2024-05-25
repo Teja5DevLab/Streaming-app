@@ -1,22 +1,32 @@
-// Navbar.jsx
 import React, { useState } from "react";
 import "./Navbar.css";
 import menu from "../../assets/menu.png";
 import logo from "../../assets/logo.png";
 import search from "../../assets/search.png";
-import upload from "../../assets/upload.png";
-import more from "../../assets/more.png";
+import save from "../../assets/save.png";
 import notification from "../../assets/notification.png";
-import profile from "../../assets/jack.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 
-const Navbar = ({ setSidebar, handleSearch }) => {
-  const [searchQuery, setSearchQuery] = useState("");
+const Navbar = ({ setSidebar, user }) => {
+  const [searchQuery, setSearchQuery] = useSearchParams();
+  const navigate = useNavigate();
+  const [text, setText] = useState();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    handleSearch(searchQuery);
-    setSearchQuery("");
+    if (!text) return;
+    setSearchQuery(() => {
+      searchQuery.set("search-query", text);
+
+      return searchQuery;
+    });
+    navigate(`/results?${searchQuery}`, {
+      replace: true,
+    });
+  };
+
+  const goToPlaylist = () => {
+    navigate("/playlist");
   };
 
   return (
@@ -38,8 +48,8 @@ const Navbar = ({ setSidebar, handleSearch }) => {
             <input
               type="text"
               placeholder="Search"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              value={text}
+              onChange={(e) => setText(e.target.value)}
             />
             <button type="submit">
               <img src={search} alt="" />
@@ -48,10 +58,9 @@ const Navbar = ({ setSidebar, handleSearch }) => {
         </form>
       </div>
       <div className="navbar navright">
-        <img src={upload} alt="" />
-        <img src={more} alt="" />
+        <img className="save-btn" onClick={goToPlaylist} src={save} alt="" />
         <img src={notification} alt="" />
-        <img className="user-icon" src={profile} alt="" />
+        <img className="user-icon" src={user.photoURL} alt="" />
       </div>
     </nav>
   );
