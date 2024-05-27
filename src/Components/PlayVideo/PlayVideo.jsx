@@ -290,7 +290,7 @@ const PlayVideo = ({ user }) => {
             {apiData
               ? value_converter(apiData[0].statistics.commentCount)
               : "1B"}{" "}
-            views Comments
+            Comments
           </h4>
           <form className="comment-form" onSubmit={handleSubmitComment}>
             <div className="add-comment">
