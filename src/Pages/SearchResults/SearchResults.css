@@ -23,6 +23,28 @@
 .search-item-details h5 {
   font-weight: 500;
 }
+
+#no-results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+
+#no-results .no-title {
+  font-weight: 450;
+  letter-spacing: 1px;
+  margin-top: 28px;
+  margin-bottom: 16px;
+}
+
+#no-results .no-msg {
+  font-weight: 450;
+  font-size: 14px;
+  letter-spacing: .8px;
+}
+
 @media (max-width: 900px) {
   .search-item img {
     width: 100%;
@@ -38,6 +60,20 @@
   .search-item-details h3 {
     font-size: 14px;
     text-wrap: wrap;
+  }
+
+  #no-results .no-img {
+    width: 230px;
+  }
+
+  #no-results .no-title {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+
+  #no-results .no-msg {
+    font-size: 12px;
   }
 
   .search-item-details h5 {

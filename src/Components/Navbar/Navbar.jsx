@@ -16,7 +16,7 @@ const Navbar = ({ setSidebar, user }) => {
     e.preventDefault();
     if (!text) return;
     setSearchQuery(() => {
-      searchQuery.set("search-query", text);
+      searchQuery.set("search-query", encodeURIComponent(text));
 
       return searchQuery;
     });

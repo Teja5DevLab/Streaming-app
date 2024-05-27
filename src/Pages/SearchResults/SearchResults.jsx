@@ -6,6 +6,7 @@ import moment from "moment";
 import { API_KEY } from "../../data";
 import loader from "../../assets/loading.gif";
 import Sidebar from "../../Components/Sidebar/Sidebar";
+import no_results from "../../assets/no-results-found.png";
 import { ProgressBar } from "../../Components/ProgressBar/ProgressBar";
 
 const SearchResults = ({ sidebar }) => {
@@ -13,6 +14,7 @@ const SearchResults = ({ sidebar }) => {
   const [category, setCategory] = useState(0);
   const [searchResults, setSearchResults] = useState([]);
   const observer = useRef();
+  const [noResults, setNoResults] = useState(false);
   const lastCommentRef = useRef();
   const [isLoading, setIsLoading] = useState(false);
   const [pageToken, setPageToken] = useState("");
@@ -30,8 +32,11 @@ const SearchResults = ({ sidebar }) => {
           setPageToken(nextPageToken);
           setSearchResults(items);
           setIsLoading(false);
+          setNoResults(false);
         } else {
           console.warn("No Feeds found");
+          setNoResults(true);
+          setSearchResults([]);
         }
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -87,13 +92,20 @@ const SearchResults = ({ sidebar }) => {
 
   return searchResults ? (
     <>
-      <ProgressBar isLoading={isLoading} />
+      {!noResults && <ProgressBar isLoading={isLoading} />}
       <Sidebar
         sidebar={sidebar}
         category={category}
         setCategory={setCategory}
       />
       <div className={`container ${sidebar ? "" : "large-container"}`}>
+        {noResults && (
+          <div id="no-results">
+            <img className="no-img" src={no_results} alt="" />
+            <h2 className="no-title">No results found</h2>
+            <p className="no-msg">Try different keywords</p>
+          </div>
+        )}
         <div className="search-results">
           {searchResults.map((result, index) => (
             <Link
@@ -116,9 +128,11 @@ const SearchResults = ({ sidebar }) => {
             </Link>
           ))}
         </div>
-        <div ref={lastCommentRef}>
-          <img className="loader" src={loader} alt="" />
-        </div>
+        {!noResults && (
+          <div ref={lastCommentRef}>
+            <img className="loader" src={loader} alt="" />
+          </div>
+        )}
       </div>
     </>
   ) : (

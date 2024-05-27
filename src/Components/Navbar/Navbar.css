@@ -30,6 +30,7 @@ nav {
   flex: 1;
   outline: 0;
   border: 0;
+  margin-right: 5px;
   background: transparent;
   font-size: 16px;
   letter-spacing: 0.6px;
@@ -44,6 +45,7 @@ nav {
 
 .search-box img {
   width: 15px;
+  margin-top: 3px;
 }
 
 .search-box button {
