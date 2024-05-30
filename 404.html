@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; URL='/streaming-app/index.html'" />
+    <title>Page Not Found</title>
+    <script type="text/javascript">
+        (function() {
+            var pathname = window.location.pathname;
+            var redirectPath = '/streaming-app/index.html';
+            if (pathname !== '/streaming-app/' && pathname !== redirectPath) {
+                window.location.href = redirectPath + '?redirect=' + encodeURIComponent(pathname);
+            }
+        })();
+    </script>
+</head>
+<body>
+</body>
+</html>
