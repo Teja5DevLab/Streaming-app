@@ -2,10 +2,27 @@
   position: fixed;
   top: 0;
   height: 100vh;
-  width: 15%;
+  width: 16%;
   background: #fff;
   padding-left: 2%;
   padding-top: 80px;
+  overflow-y: hidden;
+}
+
+.sidebar:hover {
+  overflow-y: auto;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #888;
 }
 
 .shortcut-links img {
@@ -22,6 +39,20 @@
   margin-bottom: 20px;
 }
 
+.side_links p {
+  font-size: 14px;
+  font-weight: 540;
+}
+
+.side_links p img {
+  width: 8px;
+  margin-left: 10px;
+}
+
+#arrow {
+  width: 12px;
+}
+
 .sidebar hr {
   border: 0;
   height: 0.5px;
@@ -31,8 +62,9 @@
 
 .subscribed h3 {
   margin: 20px 0;
-  color: #5a5a5a;
-  font-size: 13px;
+  font-size: 15px;
+  font-weight: 560;
+  cursor: pointer;
 }
 
 .subscribed img {
@@ -61,13 +93,25 @@
   display: none;
 }
 
-.logoutWrap{
+.you-wrap{
   display: flex;
   flex-direction: column;
   width: max-content;
 }
 
-.logoutWrap #logout {
+.you-wrap h3 {
+  margin: 20px 0 5px 0;
+  font-size: 15px;
+  font-weight: 560;
+  cursor: pointer;
+}
+
+.you-wrap h3 img{
+  width: 10px;
+  margin-left: 6px;
+}
+
+.you-wrap #logout {
   padding: 5px 15px;
   display: flex;
   align-items: center;
@@ -81,12 +125,16 @@
   cursor: pointer;
 }
 
-.logoutWrap #logout img{
+.you-wrap .play {
+  margin-bottom: 20px !important;
+}
+
+.you-wrap #logout img{
   width: 20px;
   margin: 2px 0;
 }
 
-.logoutWrap #logout-image{
+.you-wrap #logout-image{
   width: 20px;
   margin: 10px 0;
 }
@@ -97,13 +145,37 @@
   transition: border-bottom 0.1s ease-out;
 }
 
+.side_footer_wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.side_footer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.side_footer p {
+  font-size: 13px;
+  color: #5a5a5a;
+  font-weight: 560;
+  cursor: pointer;
+  margin: 2px 3px;
+}
+
+#copyright {
+  color: #5a5a5a;
+  font-size: 13px;
+  font-weight: 550;
+  margin: 10px 5px;
+}
+
 @media (max-width: 1150px) {
   .side_links img {
-    width: 15px;
+    width: 16px;
     margin-right: 15px;
-  }
-  .side_links p {
-    font-size: 14px;
   }
 }
 

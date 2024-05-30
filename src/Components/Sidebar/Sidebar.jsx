@@ -8,7 +8,15 @@ import music from "../../assets/music.png";
 import blogs from "../../assets/blogs.png";
 import news from "../../assets/news.png";
 import save from "../../assets/save.png";
+import ben from "../../assets/ben.jpg";
+import dot from "../../assets/dot.png";
+import youn from "../../assets/youn.jpg";
+import ufc from "../../assets/ufc.jpg";
+import shroud from "../../assets/shroud.jpg";
+import nileblue from "../../assets/nileblue.jpg";
+import nilered from "../../assets/nilered.jpg";
 import tech from "../../assets/tech.png";
+import arrow from "../../assets/right-arrow.png";
 import sports from "../../assets/sports.png";
 import automobile_icon from "../../assets/automobiles.png";
 import { logOut } from "../../firebase";
@@ -28,6 +36,8 @@ const Sidebar = ({ sidebar, category, setCategory }) => {
   const goToPlaylist = () => {
     navigate("/playlist");
   };
+
+  const currentYear = new Date().getFullYear();
 
   return (
     <div className={`sidebar ${sidebar ? "" : "small-sidebar"}`}>
@@ -97,7 +107,10 @@ const Sidebar = ({ sidebar, category, setCategory }) => {
         </div>
         <hr />
       </div>
-      <div className="logoutWrap">
+      <div className="you-wrap">
+        <h3>
+          You <img src={arrow} alt="" />
+        </h3>
         {sidebar ? (
           <button id="logout" onClick={handleLogout}>
             <img src={logout} alt="Logout" />
@@ -112,7 +125,7 @@ const Sidebar = ({ sidebar, category, setCategory }) => {
           />
         )}
         {sidebar ? (
-          <button id="logout" onClick={goToPlaylist}>
+          <button id="logout" className="play" onClick={goToPlaylist}>
             <img src={save} alt="Playlist" />
             Playlist
           </button>
@@ -129,13 +142,71 @@ const Sidebar = ({ sidebar, category, setCategory }) => {
       <div className="subscribed">
         <h3>Subscriptions</h3>
         <div className="side_links">
-          <img src={megan} alt="" />
-          <p>Ben Shapiro</p>
+          <img src={ben} alt="" />
+          <p>
+            Ben <img src={dot} alt="" />
+          </p>
+        </div>
+        <div className="side_links">
+          <img src={ufc} alt="" />
+          <p>
+            UFC <img src={dot} alt="" />
+          </p>
+        </div>
+        <div className="side_links">
+          <img src={youn} alt="" />
+          <p>
+            Dr. Youn <img src={dot} alt="" />
+          </p>
+        </div>
+        <div className="side_links">
+          <img src={shroud} alt="" />
+          <p>
+            Shroud <img src={dot} alt="" />
+          </p>
+        </div>
+        <div className="side_links">
+          <img src={nileblue} alt="" />
+          <p>
+            NileBlue <img src={dot} alt="" />
+          </p>
+        </div>
+        <div className="side_links">
+          <img src={nilered} alt="" />
+          <p>
+            NileRed <img src={dot} alt="" />
+          </p>
         </div>
         <div className="side_links">
           <img src={megan} alt="" />
-          <p>UFC</p>
+          <p>
+            Craft <img src={dot} alt="" />
+          </p>
         </div>
+        <div className="side_links">
+          <img id="arrow" src={arrow} alt="" />
+          <p>Show More</p>
+        </div>
+      </div>
+      <hr id="line1" />
+      <div className="side_footer_wrap">
+        <div className="side_footer">
+          <p>About</p>
+          <p>Press</p>
+          <p>Copyright</p>
+          <p>Contact us</p>
+          <p>Creator</p>
+          <p>Advertise</p>
+          <p>Developer</p>
+        </div>
+        <div className="side_footer">
+          <p>Terms</p>
+          <p>Privacy</p>
+          <p>Policy & Safety</p>
+          <p>How YouTube works</p>
+          <p>Test new features</p>
+        </div>
+        <p id="copyright">&copy; {currentYear} Tejas Agrawal</p>
       </div>
     </div>
   );
