@@ -3,7 +3,7 @@
 }
 
 .recommended h3 {
-  margin-bottom: 15px;
+  margin: 12px 0;
 }
 
 .error-message {
@@ -61,6 +61,10 @@
   .recommended {
     margin-top: 15px;
     flex-basis: 100%;
+  }
+
+  .recommended h3 {
+    margin-bottom: 12px;
   }
 
   .loader {
