@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Streaming-app/static/css/main.db4a1a1f.css",
-    "main.js": "/Streaming-app/static/js/main.e4a8df4f.js",
+    "main.css": "/Streaming-app/static/css/main.39a43fdb.css",
+    "main.js": "/Streaming-app/static/js/main.84c073c3.js",
     "static/js/453.7cf78889.chunk.js": "/Streaming-app/static/js/453.7cf78889.chunk.js",
     "static/media/nilered.jpg": "/Streaming-app/static/media/nilered.531389071d0e91f9b807.jpg",
     "static/media/shroud.jpg": "/Streaming-app/static/media/shroud.47214396389c0363291a.jpg",
@@ -17,12 +17,12 @@
     "static/media/loginBg.avif": "/Streaming-app/static/media/loginBg.55809a49cd9e37890cf9.avif",
     "static/media/dot.png": "/Streaming-app/static/media/dot.3bdcdf6baafe238dec5f.png",
     "index.html": "/Streaming-app/index.html",
-    "main.db4a1a1f.css.map": "/Streaming-app/static/css/main.db4a1a1f.css.map",
-    "main.e4a8df4f.js.map": "/Streaming-app/static/js/main.e4a8df4f.js.map",
+    "main.39a43fdb.css.map": "/Streaming-app/static/css/main.39a43fdb.css.map",
+    "main.84c073c3.js.map": "/Streaming-app/static/js/main.84c073c3.js.map",
     "453.7cf78889.chunk.js.map": "/Streaming-app/static/js/453.7cf78889.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.db4a1a1f.css",
-    "static/js/main.e4a8df4f.js"
+    "static/css/main.39a43fdb.css",
+    "static/js/main.84c073c3.js"
   ]
 }
