@@ -1,12 +1,9 @@
 import React from "react";
+import { logOut } from "../../firebase";
+import logout from "../../assets/exit.png";
+import { useNavigate } from "react-router-dom";
 import "./Sidebar.css";
-import home from "../../assets/home.png";
 import megan from "../../assets/megan.png";
-import entertainment from "../../assets/entertainment.png";
-import game_icon from "../../assets/game_icon.png";
-import music from "../../assets/music.png";
-import blogs from "../../assets/blogs.png";
-import news from "../../assets/news.png";
 import save from "../../assets/save.png";
 import ben from "../../assets/ben.jpg";
 import dot from "../../assets/dot.png";
@@ -15,13 +12,13 @@ import ufc from "../../assets/ufc.jpg";
 import shroud from "../../assets/shroud.jpg";
 import nileblue from "../../assets/nileblue.jpg";
 import nilered from "../../assets/nilered.jpg";
-import tech from "../../assets/tech.png";
 import arrow from "../../assets/right-arrow.png";
-import sports from "../../assets/sports.png";
-import automobile_icon from "../../assets/automobiles.png";
-import { logOut } from "../../firebase";
-import logout from "../../assets/exit.png";
-import { useNavigate } from "react-router-dom";
+import { GrTechnology, GrBlog } from "react-icons/gr";
+import { FiHome } from "react-icons/fi";
+import { SlTrophy } from "react-icons/sl";
+import { SiRimacautomobili } from "react-icons/si";
+import { LuMusic4, LuNewspaper } from "react-icons/lu";
+import { PiGameController, PiTelevision } from "react-icons/pi";
 
 const Sidebar = ({ sidebar, category, setCategory }) => {
   const navigate = useNavigate();
@@ -46,63 +43,63 @@ const Sidebar = ({ sidebar, category, setCategory }) => {
           className={`side_links ${category === 0 ? "active" : ""}`}
           onClick={() => setCategory(0)}
         >
-          <img src={home} alt="1." />
+          <FiHome className="icons" />
           <p>Home</p>
         </div>
         <div
           className={`side_links ${category === 20 ? "active" : ""}`}
           onClick={() => setCategory(20)}
         >
-          <img src={game_icon} alt="2." />
+          <PiGameController className="icons" />
           <p>Gaming</p>
         </div>
         <div
           className={`side_links ${category === 2 ? "active" : ""}`}
           onClick={() => setCategory(2)}
         >
-          <img src={automobile_icon} alt="3." />
+          <SiRimacautomobili className="icons" />
           <p>AutoMobiles</p>
         </div>
         <div
           className={`side_links ${category === 17 ? "active" : ""}`}
           onClick={() => setCategory(17)}
         >
-          <img src={sports} alt="4." />
+          <SlTrophy className="icons" />
           <p>Sports</p>
         </div>
         <div
           className={`side_links ${category === 24 ? "active" : ""}`}
           onClick={() => setCategory(24)}
         >
-          <img src={entertainment} alt="5." />
+          <PiTelevision className="icons" />
           <p>Entertainment</p>
         </div>
         <div
           className={`side_links ${category === 28 ? "active" : ""}`}
           onClick={() => setCategory(28)}
         >
-          <img src={tech} alt="6." />
+          <GrTechnology className="icons" />
           <p>Technology</p>
         </div>
         <div
           className={`side_links ${category === 10 ? "active" : ""}`}
           onClick={() => setCategory(10)}
         >
-          <img src={music} alt="7." />
+          <LuMusic4 className="icons" />
           <p>Music</p>
         </div>
         <div
           className={`side_links ${category === 22 ? "active" : ""}`}
           onClick={() => setCategory(22)}
         >
-          <img src={blogs} alt="8." />
+          <GrBlog className="icons" />
           <p>Blogs</p>
         </div>
         <div
           className={`side_links ${category === 25 ? "active" : ""}`}
           onClick={() => setCategory(25)}
         >
-          <img src={news} alt="9." />
+          <LuNewspaper className="icons" />
           <p>News</p>
         </div>
         <hr />
@@ -188,7 +185,7 @@ const Sidebar = ({ sidebar, category, setCategory }) => {
           <p>Show More</p>
         </div>
       </div>
-      <hr id="line1" />
+      <hr id="line2" />
       <div className="side_footer_wrap">
         <div className="side_footer">
           <p>About</p>

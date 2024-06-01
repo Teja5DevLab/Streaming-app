@@ -1,18 +1,18 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./PlayVideo.css";
-import like from "../../assets/like.png";
-import profile from "../../assets/user_profile.jpg";
-import dislike from "../../assets/dislike.png";
-import check from "../../assets/check.png";
-import bell from "../../assets/bell.png";
-import save from "../../assets/save.png";
-import { API_KEY, value_converter } from "../../data";
-import loader from "../../assets/loading.gif";
 import axios from "axios";
 import moment from "moment";
 import { useParams } from "react-router-dom";
 import { db, auth } from "../../firebase";
 import { doc, setDoc, deleteDoc, collection } from "firebase/firestore";
+import { API_KEY, value_converter } from "../../data";
+import like from "../../assets/like.png";
+import profile from "../../assets/user_profile.jpg";
+import dislike from "../../assets/dislike.png";
+import check from "../../assets/check.png";
+import save from "../../assets/save.png";
+import loader from "../../assets/loading.gif";
+import { BsBell } from "react-icons/bs";
 
 const PlayVideo = ({ user }) => {
   const [isInPlaylist, setIsInPlaylist] = useState(false);
@@ -245,7 +245,7 @@ const PlayVideo = ({ user }) => {
             </div>
             {subscribed ? (
               <button className="subscribed-button" onClick={handleClick}>
-                <img src={bell} alt="" /> Subscribed
+                <BsBell className="bell" /> Subscribed
               </button>
             ) : (
               <button className="subscribe-button" onClick={handleClick}>

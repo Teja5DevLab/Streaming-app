@@ -101,8 +101,9 @@
   margin-left: 25px;
 }
 
-.publisher button img {
+.publisher button .bell {
   width: 18px;
+  height: auto;
   margin-right: 5px;
 }
 
