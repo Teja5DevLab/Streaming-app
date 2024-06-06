@@ -356,7 +356,7 @@ const PlayVideo = ({ user }) => {
         </div>
         <hr id="line" />
         <div ref={lastCommentRef}>
-          <img id="loader" src={loader} alt="" />
+          {commentData.length > 8 && <img id="loader" src={loader} alt="" />}
         </div>
       </div>
     </>
